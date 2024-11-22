@@ -38,3 +38,5 @@ class PortAudioConan(ConanFile):
 
     def package_info(self):
         self.cpp_info.libs = ["portaudio"]
+        self.cpp_info.includedirs = [os.path.join(self.package_folder, "include")]
+        self.cpp_info.libdirs = [os.path.join(self.package_folder, "lib")]
